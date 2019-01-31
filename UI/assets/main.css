@@ -5,7 +5,9 @@
 
 
 body{
-    background: #ffcdd2;
+    /* background: #ffcdd2; */
+    /* background: #fd7e14; */
+    background: whitesmoke;
     color:#000;
     line-height: 2;
     font-family: sans-serif;
@@ -33,7 +35,8 @@ body{
 
 
 .company-info{
-    background: #ef9a9a
+    /* background: #ef9a9a */
+    background: #fd7e14
 }
 
 
@@ -74,7 +77,8 @@ body{
 .register form button, .register form input{
     width: 100%;
     padding: 1em;
-    border: 1px solid #ffcdd2
+    /* border: 1px solid #17a2b8; */
+    border: 1px solid #ffcdd2;
 }
 
 
@@ -87,8 +91,15 @@ body{
 
 
 .register form button:hover, .register form button:focus{
-    background: green;
+    background:#fd7e14;
     color: #000;
     outline: 0;
     transition: background-color 1s ease-out;
+}
+
+
+.register h3{
+    text-align: center;
+    border: 1;
+    text-transform: uppercase;
 }
