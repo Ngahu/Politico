@@ -76,3 +76,19 @@ body{
     padding: 1em;
     border: 1px solid #ffcdd2
 }
+
+
+.register form button{
+    background: #ffcdd2;
+    border: 0;
+    text-transform: uppercase;
+}
+
+
+
+.register form button:hover, .register form button:focus{
+    background: green;
+    color: #000;
+    outline: 0;
+    transition: background-color 1s ease-out;
+}
