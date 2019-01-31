@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box; 
+    /* The box-sizing property allows us to include the padding and border in an element's total width and height */
+}
+
+
+body{
+    background: #ffcdd2;
+    color:#000;
+    line-height: 2;
+    font-family: sans-serif;
+    padding: 1em;
+}
+
+
+.container{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+
+.wrapper{
+    box-shadow: 0 0 20px 0 rgb(72, 94,116,0.7)
+}
+
+
+
+.wrapper > *{
+    padding: 1em;
+}
+
+
+.company-info{
+    background: #ef9a9a
+}
+
