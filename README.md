@@ -3,5 +3,4 @@ A platform which both the politicians and citizens can use. Politico enables cit
 
 
 
- ####GH  PAGES LINK -->
- 
+ ####GH  PAGES LINK -->  https://ngahu.github.io/Politico/
