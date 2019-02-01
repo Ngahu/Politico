@@ -25,6 +25,17 @@ body{
     padding-right:20px;
     color:#ffffff;
   }
+
+  .vote_button{
+    height: 40px;
+    background: #28a745;
+    border: 0;
+    padding-left: 20px;
+    padding-right:20px;
+    color:#ffffff;
+  }
+
+
   
   .dark{
     padding:15px;
