@@ -74,6 +74,12 @@ body{
 }
 
 
+.field-extended{
+    grid-column: 1/3;
+}
+
+
+
 .register form button, .register form input{
     width: 100%;
     padding: 1em;
