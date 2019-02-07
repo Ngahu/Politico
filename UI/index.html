@@ -14,7 +14,7 @@
 </head>
 <body>
     
-        <header>
+      <header>
                 <div class="container">
                   <div id="branding">
                     <h1><span class="highlight">Politico</h1>
@@ -22,12 +22,33 @@
                   <nav>
                     <ul>
                       <li class="current"><a href="./index.html">Home</a></li>
-                      <li><a href="./political_parties.html">Parties</a></li>
-                      <li><a href="./admin/create_political_party.html">Create Party</a></li>
-                      <li><a href="./admin/update_political_party.html">update Party</a></li>
-                      <li><a href="./user_vote.html">Vote</a></li>
-                      <li><a href="./user_login.html">Login</a></li>
-                      <li><a href="./user_signup.html">Register</a></li>
+                      
+                      <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">User</a>
+                            <div class="dropdown-content">
+                                    <a href="./user_profile.html">Profile</a>
+                                    <a href="./user_vote.html">Vote</a>
+                                    <a href="./user_signup.html">Sign Up</a>
+                                    <a href="./user_login.html">Login</a>
+                                    <a href="./password_reset.html">Reset Password</a>
+                                    <a href="./political_parties.html">Parties</a>
+                                    
+                                    
+                                  </div>
+                      </li>
+                      
+                      <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">Admin</a>
+                            <div class="dropdown-content">
+                                    <a href="./admin/admin_login.html">Admin Login</a>
+                                    <a href="./admin/create_political_party.html">Create Party</a>
+                                    <a href="./admin/create_political_office.html">Create Govt Office</a>
+                                    <a href="./admin/update_political_party.html">Update Party</a>
+                                    <a href="./admin/political_party_delete.html">Delete Party</a>
+                                    
+                                  </div>
+                        
+                      </li>
                      
                     </ul>
                   </nav>
