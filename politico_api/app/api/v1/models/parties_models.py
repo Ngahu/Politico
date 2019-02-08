@@ -83,6 +83,22 @@ class PartyModel:
         
         return the_party
 
+    @classmethod
+    def update_party(cls,party,**kwargs):
+        """ Updates party with user defined information """
+        for key, value in kwargs.items():
+            party[key] = value
 
+        return PARTY_DB
+
+    
+    @classmethod
+    def delete_party(cls,party):
+        """
+        Description:Delete a political party if it exists.\n
+        """
+        PARTY_DB.remove(party)
+        return 'Successfuly deleted party'
+        
 
 
