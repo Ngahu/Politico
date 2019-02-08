@@ -25,6 +25,6 @@ def view_two():
 
 
 
-@version_1.route("/all-parties")
+@version_1.route("/all-parties/")
 def all_parties():
     return "All parties"

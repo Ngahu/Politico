@@ -13,11 +13,10 @@ Politico is a platform that enables citizens to give their mandate to politician
 4. A user with an account should be able to declare candidacy for specific post.
 5. A user should be able to see election results.
 6. Admin should be able to edit a party information.
-7. A user should be able to get a specific politician profile.
-8. A user should be able to sign up to Politico.
-9. An admin should be able to delete a political party.
-10. A user should be able to log out of Politico.
-11. A user should be able to get a specific politician profile.
+7. A user should be able to sign up to Politico.
+8. An admin should be able to delete a political party.
+9.  A user should be able to log out of Politico.
+10.  A user should be able to get a specific politician profile.
 
 
 
