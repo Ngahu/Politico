@@ -44,7 +44,8 @@ def create_political_party():
         party_model = PartyModel(
             valid_party['party_name'],
             valid_party['party_official'],
-            valid_party['party_hq'], valid_party['logo_url']
+            valid_party['party_hq'],
+            valid_party['logo_url']
         )
         response = party_model.create_political_party()
         result = Serializer.serialize(response,201,'Created')
@@ -54,5 +55,5 @@ def create_political_party():
         return Serializer.serialize(
             "Missing {} field".format(error.args[0]), 400
         )
-        
+
 

@@ -41,7 +41,7 @@ class Validator:
         Description:Validate based on entity whether a field exists or not.\n
         """
         if entity == 'office':
-            for key, value in data.items():
+            for key, value in payload.items():
                 if key not in ('office_name', 'office_type'):
                     return 'Missing {} field'.format(key)
                 elif Validator.is_valid_word(value) is False:
@@ -50,7 +50,7 @@ class Validator:
             return payload
         
         elif entity == 'party':
-            for key, value in data.items():
+            for key, value in payload.items():
                 if key not in ('party_name', 'party_official', 'party_hq', 'logo_url'):
                     return 'Missing {} field'.format(key)
                 
