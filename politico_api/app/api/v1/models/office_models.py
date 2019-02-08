@@ -58,5 +58,27 @@ class OfficeModel:
             if office['office_id'] = office_id:
                 return office
         return None
+    
+    @classmethod
+    def get_office_by_id(cls,office_id):
+        """
+        Description:Return a specific political office given the office id if it does exist.\n
+        """
+        the_office = OfficeModel.check_office_exists(office_id)
+
+        return the_office
+    
+
+    @classmethod 
+    def update_office(cls,office,*args, **kwargs):
+        """
+        Description:Updates a political office with the user defined information.\n
+        """
+        for key, value in kwargs.items():
+            office[key] = value
+        
+        return OFFICE_DB
+        
+
 
         
