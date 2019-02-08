@@ -57,3 +57,17 @@ def create_political_party():
         )
 
 
+
+@version_1.route("/parties/<int:party_id>",methods=['GET'])
+def get_specific_party(party_id):
+    """
+    Description:Retrieve a specific political party by its id.\n
+    """
+
+    if party_id is not None:
+
+        #Check if party exists
+        party_exists = PartyModel.check_party_exists(party_id)
+
+
+
