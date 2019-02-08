@@ -87,7 +87,3 @@ class OfficeModel:
         OFFICE_DB.remove(office)
         
         return 'Successfully deleted political office.'
-
-
-
-        
