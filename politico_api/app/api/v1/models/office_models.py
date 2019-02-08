@@ -78,7 +78,16 @@ class OfficeModel:
             office[key] = value
         
         return OFFICE_DB
+    
+    @classmethod
+    def delete_office(cls,office):
+        """
+        Description:Delete a political office if it exists.\n
+        """
+        OFFICE_DB.remove(office)
         
+        return 'Successfully deleted political office.'
+
 
 
         
