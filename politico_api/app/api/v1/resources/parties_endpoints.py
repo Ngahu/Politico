@@ -57,3 +57,34 @@ def create_political_party():
         )
 
 
+
+@version_1.route("/parties/<int:party_id>",methods=['GET'])
+def get_specific_party(party_id):
+    """
+    Description:Retrieve a specific political party by its id.\n
+    """
+
+    if party_id is not None:
+
+        #Check if party exists
+        party_exists = PartyModel.check_party_exists(party_id)
+
+        if party_exists:
+            response = PartyModel.get_party_by_id(party_id)
+            result = Serializer.serialize(response,200)
+            return result
+        
+        else:
+            result = Serializer.serialize(
+                'Party {} is not available'.format(party_id), 404, 'Not Found'
+            )
+        return result
+    
+    else:
+        error = Serializer.serialize(
+            'Party id cannot be none', 405, 'Not Allowed'
+        )
+    
+    return error
+
+
