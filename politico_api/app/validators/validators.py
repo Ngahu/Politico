@@ -1,5 +1,5 @@
 '''This module contains classes that  handle data validation.'''
-
+import re
 import json
 
 from app.utils.serializer import Serializer
@@ -58,6 +58,17 @@ class Validator:
                     return 'Missing value for the {} field'.format(key)
             
             return payload
+    
 
 
+    @classmethod
+    def validate_email(cls,user_input):
+        """
+        Description:Validate whether a users email is valid or not.\n
+        """
+        is_valid = re.search(r'^\w+@\w+.\w+$', user_input)
+        if is_valid:
+            return user_input
+        return False
+        
 
