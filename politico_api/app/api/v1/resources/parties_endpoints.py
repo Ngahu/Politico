@@ -11,6 +11,7 @@ from flask  import request,jsonify,make_response
 #local imports
 from app.api.v1.models.parties_models import PartyModel
 from app.utils.serializer import Serializer
+from app.validators.validators import Validator
 
 #import the blueprint
 from app.api.v1 import version_1
@@ -34,4 +35,25 @@ def create_political_party():
     """
     Description:Create a political party.\n
     """
-    pass
+    the_party = request.get_json()
+
+    party = Validator.json_has_payload(the_party)
+    
+    try:
+        valid_party = Validator.field_exists('party',**party)
+        party_model = PartyModel(
+            valid_party['party_name'],
+            valid_party['party_official'],
+            valid_party['party_hq'],
+            valid_party['logo_url']
+        )
+        response = party_model.create_political_party()
+        result = Serializer.serialize(response,201,'Created')
+        return result
+    
+    except Exception as error:
+        return Serializer.serialize(
+            "Missing {} field".format(error.args[0]), 400
+        )
+
+
