@@ -27,3 +27,11 @@ def get_all_parties():
 
 
 
+
+
+@version_1.route("/create-political-party/",methods=['POST'])
+def create_political_party():
+    """
+    Description:Create a political party.\n
+    """
+    pass

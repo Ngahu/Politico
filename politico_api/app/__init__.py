@@ -13,11 +13,11 @@ def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(APP_CONFIG[config_name])
 
-    # from app.api.v1.resources.admin_endpoints import (
-    #     index,
-    #     all_parties,
-    #     view_two
-    #     )
+    from app.api.v1.resources.admin_endpoints import (
+        index,
+        all_parties,
+        view_two
+        )
     from app.api.v1.resources.parties_endpoints import (
         get_all_parties
     )
