@@ -18,6 +18,7 @@ def create_app(config_name):
         all_parties,
         view_two
         )
+    # from app.api.v1.resources.parties_endpoints import 
 
     from app.api.v1 import version_1
     app.register_blueprint(version_1)
