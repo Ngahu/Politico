@@ -9,7 +9,6 @@ import datetime
 PARTY_DB = []
 
 
-
 class PartyModel:
     """
     Description:Define methods  that handle all action regarding political parties.\n
