@@ -52,6 +52,36 @@ class PartyModel:
         
         except Exception as error:
             raise Exception(error)
+    
+
+    @classmethod
+    def get_all_parties(cls):
+        """
+        Description:Return all political parties.\n
+        """
+        return  PARTY_DB
+    
+    @classmethod
+    def check_party_exists(cls,party_id):
+        """ 
+        Description:Checks if a specific party exists.\n
+        Required Args: party_id.\n
+        """
+        for party in PARTY_DB:
+            if  party['party_id'] == party_id:
+                return party
+        
+        return None
+    
+
+    @classmethod
+    def get_party_by_id(cls,party_id):
+        """
+        Description:Return a specific party given the party id.\n
+        """
+        the_party = PartyModel.check_party_exists(party_id)
+        
+        return the_party
 
 
 
