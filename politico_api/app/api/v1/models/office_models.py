@@ -55,7 +55,7 @@ class OfficeModel:
         Required Args: office_id.\n
         """
         for office in  OFFICE_DB:
-            if office['office_id'] = office_id:
+            if office['office_id'] == office_id:
                 return office
         return None
     

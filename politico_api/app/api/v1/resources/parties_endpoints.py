@@ -115,3 +115,23 @@ def party_update(party_id):
 
     except Exception:
         return Serializer.serialize(updates, 500)
+
+
+
+
+@version_1.route("/parties/<int:party_id>",methods=['DELETE'])
+def delete_political_party(party_id):
+    """
+    Description:Delete an existing party.
+    """
+    party = PartyModel.check_party_exists(party_id)
+
+    if party:
+        response = PartyModel.delete_party(party)
+        result = Serializer.serialize(response, 200)
+        return result
+    
+    return make_response(jsonify({
+            'message':'Party Does not exist',
+            'status': 404
+        }))

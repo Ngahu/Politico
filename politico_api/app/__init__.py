@@ -22,7 +22,14 @@ def create_app(config_name):
         get_all_parties,
         create_political_party,
         get_specific_party,
-        party_update
+        party_update,
+        delete_political_party
+    )
+
+    from app.api.v1.resources.office_endpoints import (
+        get_all_political_offices,
+        create_office,
+        get_specific_office
     )
 
     from app.api.v1 import version_1
