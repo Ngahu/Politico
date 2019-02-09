@@ -58,7 +58,7 @@ def create_political_party():
 
 
 
-@version_1.route("/parties/<int:party_id>",methods=['GET'])
+@version_1.route("/parties/<int:party_id>/detail",methods=['GET'])
 def get_specific_party(party_id):
     """
     Description:Retrieve a specific political party by its id.\n
@@ -89,7 +89,7 @@ def get_specific_party(party_id):
 
 
 
-@version_1.route("/parties/<int:party_id>",methods=['PATCH'])
+@version_1.route("/parties/<int:party_id>/update_party",methods=['PATCH'])
 def party_update(party_id):
     """
     Description:Update an existing party
@@ -119,7 +119,7 @@ def party_update(party_id):
 
 
 
-@version_1.route("/parties/<int:party_id>",methods=['DELETE'])
+@version_1.route("/parties/<int:party_id>/delete",methods=['DELETE'])
 def delete_political_party(party_id):
     """
     Description:Delete an existing party.
