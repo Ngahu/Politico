@@ -96,7 +96,9 @@ def party_update(party_id):
     """
     raw_updates = request.get_json()
 
-    updates = Validator.json_has_data(raw_updates)
+    updates = Validator.json_has_payload(raw_updates)
+
+    # updates = raw_updates
 
     try:
         party = PartyModel.check_party_exists(party_id)
@@ -113,4 +115,3 @@ def party_update(party_id):
 
     except Exception:
         return Serializer.serialize(updates, 500)
-        
