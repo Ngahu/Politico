@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Ngahu/Politico.svg?branch=develop)](https://travis-ci.org/Ngahu/Politico)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6024222a8fcf4c5dab269b82d20ee2e3)](https://www.codacy.com/app/Ngahu_2/Politico?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ngahu/Politico&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/05539977faa426d8712e/maintainability)](https://codeclimate.com/github/Ngahu/Politico/maintainability)   [![Build Status](https://travis-ci.org/Ngahu/Politico.svg?branch=develop)](https://travis-ci.org/Ngahu/Politico) [![Coverage Status](https://coveralls.io/repos/github/Ngahu/Politico/badge.svg)](https://coveralls.io/github/Ngahu/Politico)
 
 ## Project Overview
 Politico is a platform that enables citizens to give their mandate to politicians running for different government offices while building trust in the process through transparency.
