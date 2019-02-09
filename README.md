@@ -55,6 +55,7 @@ After the configuration, you will run the app
 cd political_api
 
 export FLASK_APP=run.py
+export FLASK_ENV=development
 flask run
 ```
 

@@ -10,7 +10,7 @@ from instance.config import APP_CONFIG
 
 def create_app(config_name):
     """ Registering app confingurations """
-    app = Flask(__name__)
+    app = Flask(__name__,instance_relative_config=True)
     app.config.from_object(APP_CONFIG[config_name])
 
     # from app.api.v1.resources.admin_endpoints import (

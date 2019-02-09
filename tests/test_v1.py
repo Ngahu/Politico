@@ -3,12 +3,13 @@
 #third party imports
 import json
 import unittest
+import pytest
 
 
-#local import 
-from app.tests.v1 import TestBaseClass
+#local import i
 
 
+from tests.base_test import TestBaseClass
 
 class TestApiEndPoints(TestBaseClass):
     """
