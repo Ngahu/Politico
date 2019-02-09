@@ -21,7 +21,8 @@ def create_app(config_name):
     from app.api.v1.resources.parties_endpoints import (
         get_all_parties,
         create_political_party,
-        get_specific_party
+        get_specific_party,
+        party_update
     )
 
     from app.api.v1 import version_1

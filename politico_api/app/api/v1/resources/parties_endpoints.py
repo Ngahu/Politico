@@ -88,3 +88,30 @@ def get_specific_party(party_id):
     return error
 
 
+
+@version_1.route("/parties/<int:party_id>",methods=['PATCH'])
+def party_update(party_id):
+    """
+    Description:Update an existing party
+    """
+    raw_updates = request.get_json()
+
+    updates = Validator.json_has_payload(raw_updates)
+
+    # updates = raw_updates
+
+    try:
+        party = PartyModel.check_party_exists(party_id)
+
+        if party:
+            response = PartyModel.update_party(party, **updates)
+            result = Serializer.serialize(response, 200)
+            return result
+        
+        return make_response(jsonify({
+            'message':'Party Does not exist',
+            'status': 'Not Found'
+        }),404)
+
+    except Exception:
+        return Serializer.serialize(updates, 500)
